@@ -1,0 +1,16 @@
+(footprint "NPTH_2mm" (version 20211014) (generator pcbnew)
+  (layer "F.Cu")
+  (tedit 623C3CF0)
+  (descr "Mounting Hole 4mm, no annular")
+  (tags "mounting hole 4mm no annular")
+  (attr exclude_from_pos_files exclude_from_bom)
+  (fp_text reference "REF**" (at 0 -5) (layer "F.SilkS") hide
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 6ad5fec5-941c-4786-9db6-ebc04940edd5)
+  )
+  (fp_text value "NPTH_2mm" (at 0 -3) (layer "F.Fab") hide
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 75bd6933-626a-4c8b-b55f-f5e2578cd6f7)
+  )
+  (pad "" np_thru_hole circle (at 0 0) (size 2 2) (drill 2) (layers *.Cu *.Mask) (tstamp 3962a870-64da-40dd-8df7-4f70b48df1a9))
+)

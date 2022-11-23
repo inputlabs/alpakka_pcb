@@ -1,0 +1,11 @@
+*.kicad_prl
+*.bak
+*backups/
+temp/
+order/
+symbols/step/*.step
+.vscode
+_autosave*
+*auto_saved*
+fp-info-cache
+kicad_log

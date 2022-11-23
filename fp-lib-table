@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "ILO_fp")(type "KiCad")(uri "${KIPRJMOD}/symbols/ilo.kicad_fp")(options "")(descr ""))
+)

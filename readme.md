@@ -1,6 +1,6 @@
 # Alpakka PCB
 
-Alpakka controller Printed Circuit Board reference designs
+*Alpakka controller Printed Circuit Board reference design*
 
 ## Project links
 - [Alpakka Manual](https://inputlabs.io/devices/alpakka/manual).

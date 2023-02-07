@@ -7,6 +7,7 @@
 - [Alpakka Firmware](https://github.com/inputlabs/alpakka_firmware).
 - [Alpakka PCB](https://github.com/inputlabs/alpakka_pcb). _(you are here)_
 - [Alpakka 3D-print](https://github.com/inputlabs/alpakka_case).
+- [Input Labs Roadmap](https://github.com/orgs/inputlabs/projects/2/views/2).
 
 ## Previews
 

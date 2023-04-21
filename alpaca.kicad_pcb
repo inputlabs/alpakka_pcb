@@ -2845,7 +2845,7 @@
         (gr_line (start 1.6 0) (end 0 0) (width 1.6))
       ) (tstamp 42202ab4-d9d6-4893-b0c5-e97adf7bf735))
     (pad "36" smd custom locked (at 11.3 13.97) (size 1.6 1.6) (layers "B.Cu" "B.Mask")
-      (net 83 "VCC") (pinfunction "3V3_OUT") (pintype "bidirectional") (zone_connect 2) (thermal_bridge_angle 45)
+      (net 83 "VCC") (pinfunction "3V3_OUT") (pintype "bidirectional") (zone_connect 1) (thermal_bridge_width 0.25) (thermal_bridge_angle 0)
       (options (clearance outline) (anchor rect))
       (primitives
         (gr_line (start 1.6 0) (end 0 0) (width 1.6))

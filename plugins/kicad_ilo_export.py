@@ -4,7 +4,7 @@ import pathlib
 import itertools
 import csv
 import zipfile
-import pcbnew  # https://docs.kicad.org/doxygen-python/namespacepcbnew.html
+import pcbnew  # https://docs.kicad.org/doxygen-python-7.0/namespacepcbnew.html
 
 class InputLabsExport(pcbnew.ActionPlugin):
     def Run(self):
@@ -37,7 +37,7 @@ class InputLabsExport(pcbnew.ActionPlugin):
         plot_options.SetPlotValue(False)
         plot_options.SetPlotReference(True)
         plot_options.SetPlotInvisibleText(False)
-        plot_options.SetExcludeEdgeLayer(True)
+        # plot_options.SetExcludeEdgeLayer(True)  # Deprecated ?
         plot_options.SetSketchPadsOnFabLayers(False)
         plot_options.SetUseAuxOrigin(False)
         plot_options.SetAutoScale(True)
@@ -78,7 +78,7 @@ class InputLabsExport(pcbnew.ActionPlugin):
         writer.SetOptions(
             False,  # aMirror.
             False,  # aMinimalHeader
-            pcbnew.wxPoint(0,0),  # aOffset.
+            writer.GetOffset(),  # aOffset.
             False,  # aMerge_PTH_NPTH
         )
         writer.CreateDrillandMapFilesSet(
@@ -134,7 +134,7 @@ class InputLabsExportJLCPCB(InputLabsExport):
                 'Mid X': position_x /  1000000,
                 'Mid Y': position_y / -1000000,
                 'Layer': 'bottom' if footprint.IsFlipped() else 'top',
-                'Rotation': int(footprint.GetOrientation() / 10),
+                'Rotation': int(footprint.GetOrientation().AsDegrees()),
             })
 
     def export_bom(self):

@@ -5,6 +5,7 @@ import itertools
 import csv
 import zipfile
 import pcbnew  # https://docs.kicad.org/doxygen-python-7.0/namespacepcbnew.html
+import wx  # https://docs.wxpython.org/wx.functions.html
 
 class InputLabsExport(pcbnew.ActionPlugin):
     def Run(self):
@@ -105,6 +106,11 @@ class InputLabsExportJLCPCB(InputLabsExport):
         self.delete_temp()
         self.export_cpl()
         self.export_bom()
+        msg = (
+            'Production files successfully created at:\n' +
+            str(self.output_folder)
+        )
+        wx.MessageBox(msg, self.name, wx.OK)
 
     def prepare_folders(self):
         self.delete_temp()

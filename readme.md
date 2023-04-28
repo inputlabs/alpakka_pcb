@@ -34,7 +34,6 @@ For ordering a reference design PCB (with no modifications) is possible to use t
 - Use menu `Edit` → `Fill all zones`
 - Go to menu `Tools` → `External plugins` → `Refresh plugins`
 - Go to menu `Tools` → `External plugins` → `Input Labs: export`
-- Note that there won't be any message when the export is completed (unless there is an error).
 - Files are generated into `order/`
 
 ### If the plugin does not load correctly

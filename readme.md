@@ -19,7 +19,7 @@ For ordering a reference design PCB (with no modifications) is possible to use t
 ## Modify the schematics and PCB
 
 ### Dependencies
-- [KiCad 6](https://www.kicad.org)
+- [KiCad 7](https://www.kicad.org)
 
 ### Change components for SMT pick & place
 

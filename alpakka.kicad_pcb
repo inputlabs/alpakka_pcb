@@ -4215,7 +4215,7 @@
   (gr_text "Alpakka" (at 99.25 80) (layer "F.SilkS") (tstamp 35e38b48-3c6c-426a-816e-0b56e301550c)
     (effects (font (size 1 1) (thickness 0.16)) (justify left))
   )
-  (gr_text "b0.88.0" (at 99.2 81.75) (layer "F.SilkS") (tstamp adbea78e-5628-4f45-8223-fd9bc955358d)
+  (gr_text "b0.90.0" (at 99.2 81.75) (layer "F.SilkS") (tstamp adbea78e-5628-4f45-8223-fd9bc955358d)
     (effects (font (size 1 1) (thickness 0.16)) (justify left))
   )
   (gr_text "SMT" (at 163.75 81.75 90) (layer "F.SilkS") (tstamp b2e5420b-07eb-4cb6-b136-bf11c5bccb2c)

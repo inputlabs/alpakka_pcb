@@ -119,20 +119,24 @@ class InputLabsExportJLCPCB(InputLabsExport):
         for path in self.output_folder.glob('jlcpcb_*'):
             os.remove(path)
 
-    def get_smt_footprints(self):
+    def get_footprints(self):
         footprints = self.board.GetFootprints()
-        def is_smt(footprint):
+        def is_exportable(footprint):
             if not footprint.HasProperty('LCSC'): return False
             if footprint.GetProperty('LCSC') == '': return False
+            # Evaluate 'Export' attribute as boolean, even though the type
+            # is a string in Kicad.
+            truthly = ['True', 'true', 'TRUE', 'Yes', 'yes', 'YES', '1']
+            if footprint.GetProperty('Export') not in truthly: return False
             return True
-        return filter(is_smt, footprints)
+        return filter(is_exportable, footprints)
 
     def export_cpl(self):
         fields = ['Designator', 'Mid X', 'Mid Y', 'Layer', 'Rotation']
         cpl_file = self.output_folder / 'jlcpcb_cpl.csv'
         writer = csv.DictWriter(open(cpl_file, 'w'), fieldnames=fields)
         writer.writeheader()
-        footprints = self.get_smt_footprints()
+        footprints = self.get_footprints()
         for footprint in sorted(footprints, key=lambda x: x.GetReference()):
             position_x, position_y = footprint.GetPosition()
             writer.writerow({
@@ -149,17 +153,20 @@ class InputLabsExportJLCPCB(InputLabsExport):
         writer = csv.DictWriter(open(bom_file, 'w'), fieldnames=fields)
         writer.writeheader()
         footprints = sorted(
-            self.get_smt_footprints(),
+            self.get_footprints(),
             key=lambda x: x.GetProperty('LCSC')
         )
         groups = itertools.groupby(footprints, lambda x: x.GetProperty('LCSC'))
         for lcsc, group in groups:
             if not lcsc: continue
+            group = list(group)  # Making a reusable copy.
             references = [x.GetReference() for x in group]
+            comment = group[0].GetPropertyNative('Group')
+            mount = group[0].GetProperty('Mount')
             writer.writerow({
-                'Comment': '',
+                'Comment': comment,
                 'Designator': ','.join(sorted(references)),
-                'Footprint': 'SMD',
+                'Footprint': mount,
                 'LCSC Part Number': lcsc,
             })
 

@@ -11,5 +11,5 @@
 | Resistors     | R1...R4  | 0603   | Uniroyal    | 0603WAF200JT5E  | C22950
 | Resistors     | R6       | 0402   | Uniroyal    | 0402WGF5103TCE  | C11616
 | LEDs          | D1...D4  | 0603   | Hubei Kento | C2290           | C2290
-| Debug port    | P1       | -      | Boomele     | C50137          | C50137
+| Debug port    | P1       | -      | JST         | S4B-PH-SM4-K-TB | C265332
 | Connector     | P2       | -      | HRO         | BC-25-3P        | C707322

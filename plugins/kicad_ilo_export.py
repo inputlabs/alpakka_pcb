@@ -124,6 +124,8 @@ class InputLabsExportJLCPCB(InputLabsExport):
         def is_exportable(footprint):
             if not footprint.HasProperty('LCSC'): return False
             if footprint.GetProperty('LCSC') == '': return False
+            # Evaluate 'Export' attribute as boolean, even though the type
+            # is a string in Kicad.
             truthly = ['True', 'true', 'TRUE', 'Yes', 'yes', 'YES', '1']
             if footprint.GetProperty('Export') not in truthly: return False
             return True

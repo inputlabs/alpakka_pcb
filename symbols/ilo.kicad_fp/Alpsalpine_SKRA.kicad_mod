@@ -1,0 +1,146 @@
+(footprint "Alpsalpine_SKRA"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "759de35e-4f06-4821-a24a-4c3d0ef2602d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Alpsalpine_SKRA"
+		(at 0 -9 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8738cea9-072c-4295-aa3e-2a69526b7082")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e58495ae-b989-4c0f-a352-110845eaf6db")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9fd9be4a-2901-46b1-9d63-592726ee8893")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Field4" "${REFERENCE}"
+		(at 0 -6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "beeb9110-caa8-4063-bde4-8a06b47c325e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4 -0.5)
+		(end -4 0.5)
+		(stroke
+			(width 0.16)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "83163837-31c9-468d-8828-6b33327c9282")
+	)
+	(fp_line
+		(start -1.25 -3)
+		(end 1.25 -3)
+		(stroke
+			(width 0.16)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "054bc7ad-6b16-45e9-a47a-fc60674695e4")
+	)
+	(fp_line
+		(start -1.25 3)
+		(end 1.25 3)
+		(stroke
+			(width 0.16)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7f3c4673-2745-4070-981a-5396937ec240")
+	)
+	(fp_line
+		(start 4 -0.5)
+		(end 4 0.5)
+		(stroke
+			(width 0.16)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "80314bff-f67b-444e-9a1b-2c62e4474d64")
+	)
+	(pad "1" smd rect
+		(at -2.9 -2)
+		(size 2.75 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "13297dcc-b3bb-4dd9-a5c4-70994b7abdfa")
+	)
+	(pad "1" smd rect
+		(at 2.9 -2)
+		(size 2.75 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "5452c63c-a97c-4695-8144-83b637441c02")
+	)
+	(pad "2" smd rect
+		(at -2.9 2)
+		(size 2.75 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2e6feaa6-e987-4f33-802f-1f074d5b15b2")
+	)
+	(pad "2" smd rect
+		(at 2.9 2)
+		(size 2.75 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "09f14cba-7e12-4b1a-b5a0-9ef6daa1f628")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../symbols/step/SKRA.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)

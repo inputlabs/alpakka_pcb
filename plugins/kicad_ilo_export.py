@@ -37,7 +37,6 @@ class InputLabsExport(pcbnew.ActionPlugin):
         plot_options.SetPlotFrameRef(False)
         plot_options.SetPlotValue(False)
         plot_options.SetPlotReference(True)
-        plot_options.SetPlotInvisibleText(False)
         plot_options.SetSketchPadsOnFabLayers(False)
         plot_options.SetUseAuxOrigin(False)
         plot_options.SetAutoScale(True)
@@ -123,7 +122,7 @@ class InputLabsExportJLCPCB(InputLabsExport):
     def get_footprints(self):
         footprints = self.board.GetFootprints()
         def is_exportable(footprint):
-            if not footprint.HasFieldByName('LCSC'): return False
+            if not footprint.HasField('LCSC'): return False
             if footprint.GetFieldText('LCSC') == '': return False
             # Evaluate 'Export' attribute as boolean, even though the type
             # is a string in Kicad.

@@ -1,17 +1,24 @@
-# Alpakka PCB
+# Input Labs' PCB schematics
 
-*Alpakka controller Printed Circuit Board reference design*
+*Printed Circuit Board reference design for Input Labs controllers and devices*
 
 ## Project links
 - [Alpakka Manual](https://inputlabs.io/devices/alpakka/manual).
-- [Alpakka Firmware](https://github.com/inputlabs/alpakka_firmware).
-- [Alpakka PCB](https://github.com/inputlabs/alpakka_pcb). _(you are here)_
-- [Alpakka 3D-print](https://github.com/inputlabs/alpakka_case).
+- [Firmware](https://github.com/inputlabs/alpakka_firmware).
+- [PCB](https://github.com/inputlabs/alpakka_pcb). <- You are here
+- [CAD (3d-print)](https://github.com/inputlabs/alpakka_case).
 - [Input Labs Roadmap](https://github.com/orgs/inputlabs/projects/2/views/2).
 
-## Previews
+## Devices
+- [Alpakka]
+- [Kapybara]
+- [Marmota]
+
+## Preview
 
 <img src="./preview.png" width="600" />
+
+*(Outdated previews for illustration only)*
 
 ## Order a PCB from the reference design
 For ordering a reference design PCB (with no modifications) is possible to use the pre-built [order files](https://github.com/inputlabs/alpakka_pcb/releases). Check the [manual](https://inputlabs.io/devices/alpakka/manual/diy_pcb) for step-by-step instructions.

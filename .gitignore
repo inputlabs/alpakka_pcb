@@ -9,3 +9,5 @@ _autosave*
 *auto_saved*
 fp-info-cache
 kicad_log
+*.step
+*.stp
